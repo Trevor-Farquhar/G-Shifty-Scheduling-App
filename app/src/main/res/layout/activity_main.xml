@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/mainpage_manageEmployee_BTN"
+        android:layout_width="165dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/purple"
+        android:text="Manage Employees"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/mainpage_dateholder_TV"
+        app:layout_constraintTop_toBottomOf="@+id/mainpage_textClock" />
+
+    <TextView
+        android:id="@+id/mainpage_top_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Welcome Back!"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/mainpage_createSchedule_BTN"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/purple"
+        android:text="Create Schedule"
+        app:layout_constraintEnd_toEndOf="@+id/mainpage_manageEmployee_BTN"
+        app:layout_constraintStart_toStartOf="@+id/mainpage_manageEmployee_BTN"
+        app:layout_constraintTop_toBottomOf="@+id/mainpage_manageEmployee_BTN" />
+
+    <Button
+        android:id="@+id/mainpage_viewtoday_BTN"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/custombutton_mp"
+        android:text="View Schedule &amp; Export"
+        app:layout_constraintBottom_toBottomOf="@+id/mainpage_createSchedule_BTN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/mainpage_manageEmployee_BTN"
+        app:layout_constraintTop_toTopOf="@+id/mainpage_manageEmployee_BTN" />
+
+    <TextView
+        android:id="@+id/mainpage_dateholder_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Date Holder"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainpage_top_textview" />
+
+    <TextClock
+        android:id="@+id/mainpage_textClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:format12Hour="hh:mm:ss a"
+        android:format24Hour="hh:mm:ss"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/mainpage_dateholder_TV"
+        app:layout_constraintTop_toBottomOf="@+id/mainpage_dateholder_TV" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Working Today:"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/mainpage_textClock"
+        app:layout_constraintTop_toBottomOf="@+id/mainpage_createSchedule_BTN" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mainpage_recview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:scrollbars="vertical"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarSize="4sp"
+        android:fadeScrollbars="false"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

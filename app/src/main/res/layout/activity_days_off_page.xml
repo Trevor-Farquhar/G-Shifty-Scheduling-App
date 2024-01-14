@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DaysOffPage">
+
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleButtonGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/daysoff_backBTN"
+        app:singleSelection="true"
+        tools:ignore="ClassNameCheck">
+
+        <Button
+            android:id="@+id/daysoff_availBTN"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Availability"
+            tools:ignore="HardcodedText,TextContrastCheck"
+            tools:layout_editor_absoluteX="47dp"
+            tools:layout_editor_absoluteY="65dp" />
+
+        <Button
+            android:id="@+id/daysoff_userinfoBTN"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Info"
+            tools:ignore="HardcodedText,TextContrastCheck"
+            tools:layout_editor_absoluteX="252dp"
+            tools:layout_editor_absoluteY="63dp" />
+
+        <Button
+            android:id="@+id/daysoff_daysoffBTN"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Days Off"
+            android:textColor="@color/purple"
+            tools:ignore="HardcodedText,TextContrastCheck"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="63dp" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        style="@android:style/Widget.Material.CalendarView"
+        android:layout_width="match_parent"
+        android:layout_height="375dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButtonGroup"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <Button
+        android:id="@+id/Days_Off_Check_All_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Check All Days Off"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButtonGroup"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButtonGroup"
+        app:layout_constraintVertical_bias="0.84"
+        tools:ignore="HardcodedText,TextContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/daysoff_backBTN"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:importantForAccessibility="no"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backarrow"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/days_off_homeBTN"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="6dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButtonGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+        android:importantForAccessibility="no" />
+
+    <Button
+        android:id="@+id/days_off_savedate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/purple"
+        android:text="Save Date"
+        app:layout_constraintStart_toStartOf="@+id/toggleButtonGroup"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButtonGroup"
+        app:layout_constraintVertical_bias="0.838"
+        tools:ignore="HardcodedText,TextContrastCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

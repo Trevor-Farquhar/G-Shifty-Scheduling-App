@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MyCmpt395PROJ" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary Brand Colors -->
+        <item name="colorPrimary">@color/pink</item>
+        <item name="colorPrimaryVariant">@color/light_pink</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary Colours -->
+        <item name="colorSecondary">@color/purple</item>
+        <item name="colorSecondaryVariant">@color/light_purple</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.MyCmpt395PROJ" parent="Base.Theme.MyCmpt395PROJ" />
+
+    <style name="Button.Purple" parent="ThemeOverlay.AppCompat">
+        <item name="colorPrimary">@color/purple</item>
+        <item name="android:radius">5dp</item>
+    </style>
+
+
+</resources>

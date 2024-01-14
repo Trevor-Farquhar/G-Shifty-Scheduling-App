@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateSchedule_Weekend">
+
+    <TextView
+        android:id="@+id/createScheduleWeekend_DateHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Date Holder"
+        app:layout_constraintEnd_toEndOf="@+id/create_schedule_weekend_homeBTN"
+        app:layout_constraintStart_toStartOf="@+id/create_schedule_weekend_homeBTN"
+        app:layout_constraintTop_toBottomOf="@+id/create_schedule_weekend_homeBTN" />
+
+    <TextView
+        android:id="@+id/createScheduleWeekend_FullDayTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="Full Day Shift"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createScheduleWeekend_DateHolder" />
+
+    <ImageButton
+        android:id="@+id/create_schedule_weekend_backBTN"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backarrow" />
+
+    <ImageButton
+        android:id="@+id/create_schedule_weekend_homeBTN"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home" />
+
+    <ImageButton
+        android:id="@+id/createScheduleWeekend_plusBTN"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="60dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/createScheduleWeekend_FullDayTextView"
+        app:layout_constraintStart_toEndOf="@+id/createScheduleWeekend_FullDayTextView"
+        app:layout_constraintTop_toTopOf="@+id/createScheduleWeekend_FullDayTextView"
+        app:srcCompat="@drawable/ic_person_add" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Add Employee"
+        app:layout_constraintBottom_toBottomOf="@+id/createScheduleWeekend_plusBTN"
+        app:layout_constraintStart_toEndOf="@+id/createScheduleWeekend_plusBTN"
+        app:layout_constraintTop_toTopOf="@+id/createScheduleWeekend_plusBTN" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/createScheduleWeekend_recview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createScheduleWeekend_plusBTN" />
+
+    <Button
+        android:id="@+id/createScheduleWeekend_applyBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Apply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

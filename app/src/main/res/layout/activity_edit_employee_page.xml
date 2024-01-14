@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditEmployeePage">
+
+    <Button
+        android:id="@+id/apply_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Apply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/edit_emp_trained_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:text="Employee Trained"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/afternoon_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="Afternoon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_emp_trained_text" />
+
+    <CheckBox
+        android:id="@+id/morning_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Morning"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_emp_trained_text" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="329dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:overScrollMode="ifContentScrolls"
+        app:layout_constraintBottom_toTopOf="@+id/edit_emp_trained_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButtonGroup"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/text_field_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="7dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/custom_edit_employee_page_textbox"
+                android:drawableStart="@drawable/custom_name_icon"
+                android:drawablePadding="12dp"
+                android:hint="First Name*"
+                android:inputType="textPersonName"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:singleLine="true"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/text_field_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="7dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/custom_edit_employee_page_textbox"
+                android:drawableStart="@drawable/custom_name_icon"
+                android:drawablePadding="12dp"
+                android:hint="Last Name*"
+                android:inputType="textPersonName"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:singleLine="true"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/text_field_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="7dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/custom_edit_employee_page_textbox"
+                android:drawableStart="@drawable/custom_phone_icon"
+                android:drawablePadding="12dp"
+                android:hint="Phone Number*"
+                android:inputType="phone"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:singleLine="true"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/text_field_email"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="7dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/custom_edit_employee_page_textbox"
+                android:drawableStart="@drawable/custom_mail_icon"
+                android:drawablePadding="12dp"
+                android:hint="Email*"
+                android:inputType="textEmailAddress"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:singleLine="true"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleButtonGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_emp_backBTN"
+        app:singleSelection="true"
+        tools:ignore="ClassNameCheck">
+
+        <Button
+            android:id="@+id/edit_emp_availability"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Availability"
+            tools:layout_editor_absoluteX="137dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <Button
+            android:id="@+id/edit_emp_user_info"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Info"
+            android:textColor="@color/purple"
+            tools:layout_editor_absoluteX="274dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <Button
+            android:id="@+id/edit_emp_days_off"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Days Off"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+
+    <ImageButton
+        android:id="@+id/edit_emp_homeBTN"
+        android:layout_width="42dip"
+        android:layout_height="42dip"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home" />
+
+    <ImageButton
+        android:id="@+id/edit_emp_backBTN"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backarrow" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

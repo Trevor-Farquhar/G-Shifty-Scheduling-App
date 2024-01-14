@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:layout_margin="8dp"
+    app:cardElevation="6dp"
+    app:cardCornerRadius="10dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/custom_ripple">
+
+        <TextView
+            android:id="@+id/employee_listdesign_name"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="First Last"
+            android:textColor="@color/pink"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/employee_listdesign_profile_text"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.30" />
+
+        <TextView
+            android:id="@+id/employee_listdesign_subname"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Trained"
+            android:textColor="@color/pink"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/employee_listdesign_name"
+            app:layout_constraintTop_toBottomOf="@+id/employee_listdesign_name" />
+
+        <TextView
+            android:id="@+id/employee_listdesign_phonenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="780 584 9581"
+            android:textColor="@color/grey"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/employee_listdesign_subname"
+            app:layout_constraintTop_toTopOf="@+id/employee_listdesign_subname"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/employee_listdesign_profile_text"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="13dp"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:background="@drawable/profile_text_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
